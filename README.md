@@ -1,7 +1,7 @@
 # SYSC4001_A3P2
 Description: Assignment 3 Part 2 answer for SYSC4001
 Group: 37
-## Compilation for Part 2 -A
+## Compilation for Part 2 -A & B
 
 1. Open a terminal in the directory containing files which are the exam text files(1-20), rubric.txt and the ta_marking.c
 2. Load the Program
@@ -21,4 +21,5 @@ This leads to prints like a TA marking a question for the new student even thoug
 4. Some TAs may still be reviewing the rubric for the previous exam while another TA has already loaded the next exam.
 5. Multiple TAs may overwrite rubric.txt at the same time, causing inconsistent saved rubric values.
 
-
+## Assumptions for Part 2 - B
+Due to concurrent execution, so multiple TA processes print at the same time, their output lines may appear mixed together in the terminal, so the rubric messages and marking messages may appear out of sequence on the screen, even though each TA still performs all rubric checks before marking any questions.

@@ -6,11 +6,17 @@ Group: 37
 1. Open a terminal in the directory containing files which are the exam text files(1-20), rubric.txt and the ta_marking.c
 2. Load the Program
 ```bash
-gcc -o ta_marking ta_marking.c
+gcc -o partB_101194310_101299427 partB_101194310_101299427.c
+```
+```bash
+gcc -o partA_101194310_101299427 partB_101194310_101299427.c
 ```
 3. Run the program by also entering the number of TAs wanted. Here's an example with 2
 ```bash
-./ta_marking 2
+./partA_101194310_101299427 2
+```
+```bash
+./partB_101194310_101299427 2
 ```
 ## Assumptions for Part 2 -A
 Race Condition occurs and is visible in outputs. They may include:

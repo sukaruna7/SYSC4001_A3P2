@@ -14,11 +14,11 @@ gcc -o ta_marking ta_marking.c
 ```
 ## Assumptions for Part 2 -A
 Race Condition occurs and is visible in outputs. They may include:
-1. Multiple TAs read and update the same rubric entry at the same time, causing rapid letter changes (e.g., E→F→G).
+1. Multiple TAs read and update the same rubric entry at the same time, causing rapid letter changes.
 2. Two TAs may select and mark the same question because they both see question_marked[i] == 0 before either sets it to 1.
 3. TA 0 may load the next exam (changing student_id and resetting question_marked) while other TAs are still finishing marking the previous exam.
 This leads to prints like a TA marking a question for the new student even though it belonged to the previous one.
-4. Some TAs may still be reviewing or modifying the rubric for the previous exam while another TA has already loaded the next exam.
+4. Some TAs may still be reviewing the rubric for the previous exam while another TA has already loaded the next exam.
 5. Multiple TAs may overwrite rubric.txt at the same time, causing inconsistent saved rubric values.
 
 
